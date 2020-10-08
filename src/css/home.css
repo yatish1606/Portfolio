@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+section {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.bg img {
+    width: 110vw;
+    height: 110vh;
+    filter: brightness(0.6);
+}
+
+.rock1 {
+    position: absolute !important;
+    top: 20vh !important;
+    left: 10vw !important;
+}
+
+.rock1 img {
+    width: 40%;
+    filter: brightness(0.6);
+}
+
+.text h1 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    z-index: 10;
+    font-family: 'Lexend Deca';
+}
+
+.subtext h1 {
+    position: absolute;
+    top: 45vh;
+    left: 65vw;
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    z-index: 11;
+    font-family: 'Lexend Deca';
+}
+
+.earth img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 25vh;
+    left: 36vw;
+    z-index: 1;
+    filter: brightness(0.7);
+}
+
+.mid {
+    left: -150px !important;
+    bottom: -100px !important;
+    top: unset !important;
+}
+
+
+.mid img {
+    width: 100%;
+    z-index: 2;
+    left: -20px;
+    top: 20vh !important;
+    filter: brightness(0.8);
+}
+
+.fore {
+    right: -50px !important;
+    bottom: -200px !important;
+    top: 0px !important;
+    left: unset !important;
+}
+
+.fore img {
+    width: 400px;
+    height: 110vh;
+    z-index: 3;
+    filter: brightness(0.5);
+}

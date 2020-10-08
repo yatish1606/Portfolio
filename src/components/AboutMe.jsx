@@ -4,7 +4,7 @@ class AboutMe extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{backgroundColor:'black', height:1000}}>
                 about me
             </div>
         )

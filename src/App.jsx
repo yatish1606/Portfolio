@@ -1,13 +1,19 @@
 import React from 'react'
 
-import {AboutMe, Home} from './components'
-// import Home from './components/Home'
+import { Header, Home, AboutMe } from './components'
+
+import './css/app.css'
 
 class App extends React.Component {
+
+    componentDidMount() {
+        
+    }
+
     render() {
         return (
             <div>
-                hi
+                <Header/>
                 <Home/>
                 <AboutMe/>
             </div>
