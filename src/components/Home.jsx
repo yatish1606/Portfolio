@@ -27,10 +27,10 @@ class Home extends React.Component {
                     <div data-depth={0.2} className="rock1">
                         <img src={rock}/>
                     </div>
-                    <div data-depth={1.2} className="earth">
+                    <div data-depth={1.0} className="earth">
                         <img src={earth}/>
                     </div>
-                    <div data-depth={0.1} className="text">
+                    <div data-depth={0.2} className="text">
                         <h1>I'm Yatish</h1>
                     </div>
                     <div data-depth={0.4} className="subtext">

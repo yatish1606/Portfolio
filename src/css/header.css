@@ -1,7 +1,7 @@
 .header-container {
     width: 100vw;
     margin: 0;
-    padding: 5px 30px;
+    padding: 5px 50px;
     box-sizing: border-box;
     position: absolute;
     top: 0;
@@ -20,6 +20,7 @@
 
 .header-container li {
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .header-container img {

@@ -8,6 +8,10 @@ import '../css/header.css'
 
 class Header extends React.Component {
 
+    state = {
+        background: false
+    }
+
     render() {
         console.log(facebook)
         return (
