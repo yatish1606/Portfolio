@@ -22,14 +22,14 @@ class Header extends React.Component {
     handleNavigation = navID => {
         switch(navID) {
             case 0: 
-                window.scroll({top:0, left:0, behavior:'smooth'})
+                return window.scroll({top:0, left:0, behavior:'smooth'})
             case 1:
-                window.scroll({top:window.innerHeight, left:0, behavior:'smooth'})
+                return window.scroll({top:window.innerHeight, left:0, behavior:'smooth'})
         }
     }
 
     render() {
-        console.log(facebook)
+        
         return (
             <div className="header-container" style={{background: this.state.windowHeightExceeded ? 'linear-gradient(to bottom, #000000 70%, #00000000 )' : 'transparent'}}>
                 <div>

@@ -2,6 +2,8 @@ import React from 'react'
 
 import '../css/about-me.css'
 
+import bitmoji from '../images/bitmoji.png'
+
 class AboutMe extends React.Component {
 
     constructor(props) {
@@ -103,7 +105,7 @@ class AboutMe extends React.Component {
                     </svg>
                     {/* <p style={{position:'absolute', marginTop:170, left:'30%', fontFamily:'Consolas', fontSize:14, visibility: window.scrollY > window.innerHeight * 0.5 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: window.scrollY > window.innerHeight* 0.6 ? 1 : 0, color:'#ababab' }}>document.querySelector('div').innerHTML = Lorem ipsum</p>
                     <p style={{position:'absolute', marginTop:250, left:'25%', fontFamily:'Consolas', fontSize:14, visibility: window.scrollY > window.innerHeight * 0.5 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: window.scrollY > window.innerHeight* 0.6 ? 1 : 0, color:'#ababab' }}>document.querySelector('div').innerHTML = Lorem ipsum</p> */}
-                    <img src="https://im7.ezgif.com/tmp/ezgif-7-9f0be61aa3b9.gif" style={{position:'absolute', left:'30%', marginTop:160, zIndex:9, borderRadius:100, background:'linear-gradient(to bottom, #000000 70%, #00000000 )'}}/>
+                    {/* <img src="https://im7.ezgif.com/tmp/ezgif-7-9f0be61aa3b9.gif" style={{position:'absolute', left:'30%', marginTop:160, zIndex:9, borderRadius:100, background:'linear-gradient(to bottom, #000000 70%, #00000000 )'}}/> */}
 
                     {/* Second SVG */}
                     <h2 className="about-me-text" style={{right:'15%', marginBottom:0, zIndex:10, top: window.innerHeight * 1.1 + 470, visibility: this.state.scrollPercent > 1 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: this.state.scrollPercent > 1 ? 1 : 0 }}>and develop software</h2>
@@ -126,7 +128,7 @@ class AboutMe extends React.Component {
                     </svg>
 
                     {/* Third SVG */}
-                    <h2 className="about-me-text" style={{left:'15%',top: window.innerHeight * 1.1 + 900, visibility: this.state.scrollPercent > 0 ? 'visible' : 'hidden', transition: 'visibility 0.3s, opacity 0.2s linear', opacity: this.state.scrollPercent > 2 ? 1 : 0}}>I focus on User Experience</h2>
+                    {/* <h2 className="about-me-text" style={{left:'15%',top: window.innerHeight * 1.1 + 900, visibility: this.state.scrollPercent > 0 ? 'visible' : 'hidden', transition: 'visibility 0.3s, opacity 0.2s linear', opacity: this.state.scrollPercent > 2 ? 1 : 0}}>I focus on User Experience</h2>
                     <svg className="svg1" height={360} width="70vw" style={{alignSelf:'center', display:'flex', flexDirection:'column', alignItems:'center', margin: 'auto', paddingLeft:'15%',marginTop:70, }} >
                         <path 
                             className="svgPath"
@@ -145,9 +147,44 @@ class AboutMe extends React.Component {
                         <stop offset="0" stop-color="#04CE1A" />
                         <stop offset="1" stop-color="#D0F205" />
                         </linearGradient>
-                    </svg>
+                    </svg> */}
 
                 </div>
+                
+                <div className='swipedown' style={{display: window.scrollY > window.innerHeight * 1.1 + 300 ? '' : 'none',width: '15vw', height:'15vw', borderRadius:200, marginLeft:'19%', backgroundColor:'#F8CC05', top: -10, position:'relative', zIndex:10}}>
+                    <div className="profile-picture">
+                        <img src={bitmoji} style={{width:'100%', height:'100%', objectFit:'cover'}}/>
+                    </div>
+                </div>
+                
+                {/* <svg className="svg2" height={400} width="40vw" style={{alignSelf:'center', display:'absolute', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, top: -30,}} >
+                        <path 
+                            // className="svgPath2"
+                            d = "M 0 0 L 0 600 "  
+                            fill="none" 
+                            strokeWidth={40}
+                            strokeLinecap="round"
+                            strokeDashoffset={this.state.strokeDashoffset2} 
+                            strokeDasharray={this.state.strokeDasharray2}
+                            style={{stroke: 'url(#linear-gradient2)', width:'100%', margin:'0 auto'}}
+                        />
+                        <linearGradient id="linear-gradient2" x1="6.49" y1="151.03" x2="244.48" y2="151.03"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#F84505" />
+                        <stop offset="1" stop-color="#F8CC05" />
+                        </linearGradient>
+                </svg> */}
+
+                <div className="who-am-i" style={{display: window.scrollY > window.innerHeight * 1.1 + 300 ? '' : 'none',width: '50vw', height:'30vw', marginLeft:'37%', backgroundColor:'transparent', top: -250, position:'relative',}}>
+                    <h2>But who am I ?</h2>
+                    <p>I am Yatish Kelkar. I am currently interning at FortyTwo Labs as a Product Designer</p>
+                    <p>I am Yatish Kelkar. I am currently interning at FortyTwo Labs as a Product Design Intern</p>
+                    <p>I am Yatish Kelkar. I am currently interning at FortyTwo Labs as a Product Design Intern</p>
+                
+                
+                </div>
+
+
             </div>
         )
     }

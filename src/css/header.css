@@ -32,6 +32,9 @@
     font-weight: 500;
     transition: 0.2s ease-in;
     margin: 0 15px;
+    background: radial-gradient(#000, #00000000);
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 .header-container li:hover {
     color: #FFE500;

@@ -6,3 +6,47 @@
     font-weight: 700;
     color: #ffffff;
 }
+
+.swipedown {
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: linearwipe 6s steps(60, end); */
+    /* nimation: linear(); */
+    animation: linearwipe;
+    animation-duration: 0.4s;
+}
+
+@keyframes linearwipe{ 
+    from { background-color: transparent; transform: scale(0); }
+    to { background-color: #F8CC05; transform: scale(1);} 
+}  
+
+.profile-picture {
+    width: 13vw;
+    height: 13vw;
+    border-radius: 100%;
+    margin: auto;
+    margin: auto auto;
+    margin-top: 1vw;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.who-am-i h2{
+    font-family: 'Lexend Deca';
+    font-size: 50px;
+    margin: 20px 0;
+    padding: 0;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.who-am-i p{
+    font-family: 'Lexend Deca';
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 0;
+    font-weight: 500;
+    color: #fff;
+}
