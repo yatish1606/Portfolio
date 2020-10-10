@@ -55,7 +55,7 @@ class AboutMe extends React.Component {
             var draw = length * scrollpercent 
             this.setState({strokeDashoffset: length - draw, scrollPercent : scrollpercent})
 
-            var scrollpercent2 = (document.documentElement.scrollTop - window.innerHeight + 500) / document.querySelector('.svg2').clientHeight
+            var scrollpercent2 = (document.documentElement.scrollTop - window.innerHeight + 650) / document.querySelector('.svg2').clientHeight
             var draw2 = length2 * scrollpercent2 
             this.setState({strokeDashoffset2: length2 - draw2, scrollPercent2 : scrollpercent2})
 
@@ -83,17 +83,16 @@ class AboutMe extends React.Component {
                 <div className="svgDiv" style={{display:'flex', flexDirection:'column',alignItems:'center', width:'100vw'}}>
                     
                     {/* First SVG */}
-                    <h2 className="about-me-text" style={{left:'15%', visibility: this.state.scrollPercent > 0 ? 'visible' : 'hidden', transition: 'visibility 0.3s, opacity 0.2s linear', opacity: this.state.scrollPercent > -0.15 ? 1 : 0}}>I write code</h2>
-                    <svg className="svg1" height={420} width="70vw" style={{paddingTop:30,alignSelf:'center', display:'flex', flexDirection:'column', alignItems:'center', margin: 'auto', paddingLeft:'15%'}} >
+                    <h2 className="about-me-text" style={{left:'10%', visibility: this.state.scrollPercent > 0 ? 'visible' : 'hidden', transition: 'visibility 0.3s, opacity 0.2s linear', opacity: this.state.scrollPercent > -0.15 ? 1 : 0}}>I love to write code</h2>
+                    <svg className="svg1" height={420} width="70vw" style={{paddingTop:30,alignSelf:'center', display:'flex', flexDirection:'column', alignItems:'center', margin: 'auto', paddingLeft:'15%', zIndex:10}} >
                         <path 
                             className="svgPath"
                             d = "M 50 50 Q 50 200 150 200 Q 150 200 200 200 Q 300 200 350 200 C 400 200 500 200 550 200 C 550 200 650 200 650 200 C 750 200 750 300 750 350 "
-                            // M 50 100 Q 50 300 200 300 C 300 300 300 300 400 300 C 450 300 500 300 600 300 C 750 300 750 400 750 500   
                             fill="none" 
                             stroke="green" 
                             strokeDashoffset={this.state.strokeDashoffset} 
                             strokeDasharray={this.state.strokeDasharray}
-                            strokeLinejoin="round"
+                            strokeLinecap="round"
                             style={{stroke: 'url(#linear-gradient)', width:'100%', margin:'auto'}}
                         />
                         <linearGradient id="linear-gradient" x1="6.49" y1="151.03" x2="244.48" y2="151.03"
@@ -102,15 +101,19 @@ class AboutMe extends React.Component {
                         <stop offset="1" stop-color="#44d0ff" />
                         </linearGradient>
                     </svg>
+                    {/* <p style={{position:'absolute', marginTop:170, left:'30%', fontFamily:'Consolas', fontSize:14, visibility: window.scrollY > window.innerHeight * 0.5 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: window.scrollY > window.innerHeight* 0.6 ? 1 : 0, color:'#ababab' }}>document.querySelector('div').innerHTML = Lorem ipsum</p>
+                    <p style={{position:'absolute', marginTop:250, left:'25%', fontFamily:'Consolas', fontSize:14, visibility: window.scrollY > window.innerHeight * 0.5 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: window.scrollY > window.innerHeight* 0.6 ? 1 : 0, color:'#ababab' }}>document.querySelector('div').innerHTML = Lorem ipsum</p> */}
+                    <img src="https://im7.ezgif.com/tmp/ezgif-7-9f0be61aa3b9.gif" style={{position:'absolute', left:'30%', marginTop:160, zIndex:9, borderRadius:100, background:'linear-gradient(to bottom, #000000 70%, #00000000 )'}}/>
 
                     {/* Second SVG */}
-                    <h2 className="about-me-text" style={{right:'15%', marginBottom:0, top: window.innerHeight * 1.1 + 470, visibility: this.state.scrollPercent > 1 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: this.state.scrollPercent > 1 ? 1 : 0 }}>and develop software</h2>
-                    <svg className="svg2" height={320} width="70vw" style={{alignSelf:'center', display:'absolute', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, paddingLeft:'20%', transform: 'scale(-1,1)', top: -30,}} >
+                    <h2 className="about-me-text" style={{right:'15%', marginBottom:0, zIndex:10, top: window.innerHeight * 1.1 + 470, visibility: this.state.scrollPercent > 1 ? 'visible' : 'hidden', transition: 'visibility 0.4s, opacity 0.4s linear', opacity: this.state.scrollPercent > 1 ? 1 : 0 }}>and develop software</h2>
+                    <svg className="svg2" height={360} width="70vw" style={{alignSelf:'center', display:'absolute', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, paddingLeft:'20%', transform: 'scale(-1,1)', top: -30,}} >
                         <path 
                             className="svgPath2"
                             d = "M 50 50 Q 50 200 150 200 Q 150 200 200 200 Q 300 200 350 200 C 400 200 500 200 550 200 C 550 200 650 200 650 200 C 750 200 750 300 750 350 "  
                             fill="none" 
                             strokeWidth={20}
+                            strokeLinecap="round"
                             strokeDashoffset={this.state.strokeDashoffset2} 
                             strokeDasharray={this.state.strokeDasharray2}
                             style={{stroke: 'url(#linear-gradient2)', width:'100%', margin:'0 auto'}}
@@ -123,14 +126,15 @@ class AboutMe extends React.Component {
                     </svg>
 
                     {/* Third SVG */}
-                    <h2 className="about-me-text" style={{left:'15%',top: window.innerHeight * 1.1 + 880, visibility: this.state.scrollPercent > 0 ? 'visible' : 'hidden', transition: 'visibility 0.3s, opacity 0.2s linear', opacity: this.state.scrollPercent > -0.15 ? 1 : 0}}>I focus on User Experience</h2>
-                    <svg className="svg1" height={320} width="70vw" style={{alignSelf:'center', display:'flex', flexDirection:'column', alignItems:'center', margin: 'auto', paddingLeft:'15%',marginTop:100, }} >
+                    <h2 className="about-me-text" style={{left:'15%',top: window.innerHeight * 1.1 + 900, visibility: this.state.scrollPercent > 0 ? 'visible' : 'hidden', transition: 'visibility 0.3s, opacity 0.2s linear', opacity: this.state.scrollPercent > 2 ? 1 : 0}}>I focus on User Experience</h2>
+                    <svg className="svg1" height={360} width="70vw" style={{alignSelf:'center', display:'flex', flexDirection:'column', alignItems:'center', margin: 'auto', paddingLeft:'15%',marginTop:70, }} >
                         <path 
                             className="svgPath"
                             d = "M 50 50 Q 50 200 150 200 Q 150 200 200 200 Q 300 200 350 200 C 400 200 500 200 550 200 C 550 200 650 200 650 200 C 750 200 750 300 750 350 "  
                             fill="none" 
                             stroke="green" 
                             strokeWidth={20}
+                            strokeLinecap="round"
                             strokeDashoffset={this.state.strokeDashoffset} 
                             strokeDasharray={this.state.strokeDasharray}
                             strokeLinejoin="round"

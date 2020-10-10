@@ -3,11 +3,15 @@
     margin: 0;
     padding: 5px 50px;
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-container ul {
@@ -16,11 +20,22 @@
     align-items: center;
     justify-content: flex-end;
     list-style: none;
+    padding-inline-start: 0;
 }
 
 .header-container li {
     padding: 0 10px;
     cursor: pointer;
+    color: white;
+    font-family: 'Lexend Deca';
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s ease-in;
+    margin: 0 15px;
+}
+.header-container li:hover {
+    color: #FFE500;
+    transition: 0.2s ease-in;
 }
 
 .header-container img {
