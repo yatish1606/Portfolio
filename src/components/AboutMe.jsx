@@ -18,6 +18,10 @@ class AboutMe extends React.Component {
             strokeDasharray2:0,
             length2:0,
             scrollPercent2:0,
+            strokeDashoffset3:0,
+            strokeDasharray3:0,
+            length3:0,
+            scrollPercent3:0,
         }
     }
 
@@ -27,13 +31,15 @@ class AboutMe extends React.Component {
         window.addEventListener('scroll', this._onScroll)
         var path = document.querySelector(".svgPath")
         var path2 = document.querySelector(".svgPath2")
+        var path3 = document.querySelector(".svgPath3")
         var length = path.getTotalLength()
         var length2 = path2.getTotalLength()
-        this.setState({length, length2})
+        var length3 = path3.getTotalLength()
+        this.setState({length, length2, length3})
 
         path.style.strokeWidth = 20
         path2.style.strokeWidth = 20
-        this.setState({strokeDashoffset: length, strokeDasharray: length, strokeDasharray2: length2, strokeDashoffset2: length2})
+        this.setState({strokeDashoffset: length, strokeDasharray: length, strokeDasharray2: length2, strokeDashoffset2: length2,strokeDasharray3: length3, strokeDashoffset3: length3})
         
     }
 
@@ -42,7 +48,7 @@ class AboutMe extends React.Component {
     }
 
     _onScroll = () => {
-         const { length, length2 } = this.state
+         const { length, length2, length3 } = this.state
         // let elements = document.elementsFromPoint(0,window.innerHeight * 0.5)
         // let SVGElements = Array.from(elements[0].children).filter(element => element.nodeName === 'svg')
        
@@ -60,6 +66,10 @@ class AboutMe extends React.Component {
             var scrollpercent2 = (document.documentElement.scrollTop - window.innerHeight + 650) / document.querySelector('.svg2').clientHeight
             var draw2 = length2 * scrollpercent2 
             this.setState({strokeDashoffset2: length2 - draw2, scrollPercent2 : scrollpercent2})
+
+            var scrollpercent3 = (document.documentElement.scrollTop - window.innerHeight + 1950) / document.querySelector('.svg3').clientHeight * 0.5
+            var draw3 = length3 * scrollpercent3 
+            this.setState({strokeDashoffset3: length3 - draw3, scrollPercent3 : scrollpercent3})
 
             //console.log(SVGElements[numberOfSVG-1], scrollpercent)
 
@@ -80,6 +90,7 @@ class AboutMe extends React.Component {
 
     render() {
         //console.log( this.state.strokeDashoffset)
+        console.log(window.scrollY)
         return (
             <div style={{backgroundColor:'black', color:'white', marginTop:60,marginBottom:1000}} className="parentDiv" ref={this.parentReference}>
                 <div className="svgDiv" style={{display:'flex', flexDirection:'column',alignItems:'center', width:'100vw'}}>
@@ -157,29 +168,30 @@ class AboutMe extends React.Component {
                     </div>
                 </div>
                 
-                {/* <svg className="svg2" height={400} width="40vw" style={{alignSelf:'center', display:'absolute', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, top: -30,}} >
+                <svg className="svg3" height={600} width="40vw" style={{display: window.scrollY > window.innerHeight * 1.1 + 600 ? '' : 'none',alignSelf:'center', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, top: -60,  paddingLeft:'23%', position:'relative'}} >
                         <path 
-                            // className="svgPath2"
-                            d = "M 0 0 L 0 600 "  
+                            className="svgPath3"
+                            d = "M 50 50 C 50 300 50 300 50 550 "  
                             fill="none" 
-                            strokeWidth={40}
+                            strokeWidth={20}
                             strokeLinecap="round"
-                            strokeDashoffset={this.state.strokeDashoffset2} 
-                            strokeDasharray={this.state.strokeDasharray2}
-                            style={{stroke: 'url(#linear-gradient2)', width:'100%', margin:'0 auto'}}
+                            strokeDashoffset={this.state.strokeDashoffset3} 
+                            strokeDasharray={this.state.strokeDasharray3}
+                            stroke="#F8CC05"
+                            style={{width:'100%', margin:'0 auto',}}
                         />
-                        <linearGradient id="linear-gradient2" x1="6.49" y1="151.03" x2="244.48" y2="151.03"
+                        <linearGradient id="linear-gradient3" x1="3.49" y1="51.03" x2="44.48" y2="51.03"
                         gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#F84505" />
-                        <stop offset="1" stop-color="#F8CC05" />
+                        <stop offset="0" stop-color="red" />
+                        <stop offset="1" stop-color="green" />
                         </linearGradient>
-                </svg> */}
+                </svg>
 
-                <div className="who-am-i" style={{display: window.scrollY > window.innerHeight * 1.1 + 300 ? '' : 'none',width: '50vw', height:'30vw', marginLeft:'37%', backgroundColor:'transparent', top: -250, position:'relative',}}>
+                <div className="who-am-i" style={{width: '50vw', height:'30vw', marginLeft:'37%', backgroundColor:'transparent', top: -0, position:'absolute', top: window.innerHeight * 1.1 + 800, visibility: window.scrollY > window.innerHeight * 1.1 + 300 ? 'visible' : 'hidden',opacity: window.scrollY > window.innerHeight * 1.1 + 300 ? 1 : 0, transition: 'visibility 0.4s , opacity 0.4s linear'}}>
                     <h2>But who am I ?</h2>
                     <p>I am Yatish Kelkar. I am currently interning at FortyTwo Labs as a Product Designer</p>
-                    <p>I am Yatish Kelkar. I am currently interning at FortyTwo Labs as a Product Design Intern</p>
-                    <p>I am Yatish Kelkar. I am currently interning at FortyTwo Labs as a Product Design Intern</p>
+                    <p>I study at PVG's COET Pune and am 20 years old</p>
+                    <p>What I work with:</p>
                 
                 
                 </div>
