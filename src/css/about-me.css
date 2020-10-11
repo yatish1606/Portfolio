@@ -19,6 +19,11 @@
 @keyframes linearwipe{ 
     from { background-color: transparent; transform: scale(0); }
     to { background-color: #F8CC05; transform: scale(1);} 
+}
+
+@keyframes linearwipe2{ 
+    from { transform: scale(0); }
+    to { transform: scale(1);} 
 }  
 
 .profile-picture {
@@ -42,6 +47,17 @@
     margin-bottom: 40px;
 }
 
+
+.who-am-i h4{
+    font-family: 'Lexend Deca';
+    font-size: 40px;
+    margin: 20px 0;
+    padding: 0;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
 .who-am-i p{
     font-family: 'Lexend Deca';
     font-size: 18px;
@@ -49,4 +65,19 @@
     padding: 0;
     font-weight: 500;
     color: #fff;
+}
+
+.skill {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 3vw;
+    position: absolute;
+    z-index: 999;
+    display: inline;
+    border: 5px #000000 solid;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    animation: linearwipe2;
+    animation-duration: 0.3s;
 }
