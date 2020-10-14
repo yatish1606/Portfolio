@@ -1,5 +1,6 @@
 import React from 'react'
 import feather from 'feather-icons'
+import { Mail, Instagram, GitHub, MessageCircle } from 'react-feather'
 
 import '../css/about-me.css'
 
@@ -78,7 +79,7 @@ class AboutMe extends React.Component {
         const leftSpace = document.documentElement.clientWidth * 0.235  + 14
 
         return (
-            <div style={{backgroundColor:'black', color:'white', marginTop:60,marginBottom:1000}} className="parentDiv" ref={this.parentReference}>
+            <div style={{backgroundColor:'black', color:'white', marginTop:60}} className="parentDiv" ref={this.parentReference}>
                 <div className="svgDiv" style={{display:'flex', flexDirection:'column',alignItems:'center', width:'100vw'}}>
                     
                     {/* First SVG */}
@@ -128,7 +129,7 @@ class AboutMe extends React.Component {
                     </div>
                 </div>
                 
-                <svg className="svg3" height={700} width="40vw" style={{display: window.scrollY > window.innerHeight * 1.1 + 600 ? '' : 'none',alignSelf:'center', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, top: -60,  paddingLeft:'23%', position:'relative'}} >
+                <svg className="svg3" height={700} width="40vw" style={{display: window.scrollY > window.innerHeight * 1.1 + 600 ? '' : 'none',alignSelf:'center', flexDirection:'column', alignItems:'center', margin: '0 auto 0 auto', padding:0, top: -120,  paddingLeft:'23%', position:'relative'}} >
                         <path 
                             className="svgPath3"
                             d = "M 50 50 C 50 300 50 300 50 650 "  
@@ -142,8 +143,8 @@ class AboutMe extends React.Component {
                         />
                         <linearGradient id="linear-gradient3" x1="0%" y1="10%" x2="0%" y2="100%"
                         gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#F8CC05" />
-                        <stop offset="0.25" stop-color="#0AA71D" />
+                        <stop offset="0.1" stop-color="#F8CC05" />
+                        <stop offset="0.3" stop-color="#0AA71D" />
                         <stop offset="0.5" stop-color="#0AA777" />
                         <stop offset="1" stop-color="#0A9EA3" />
                         <stop offset="1" stop-color="#0996CE" />
@@ -152,16 +153,10 @@ class AboutMe extends React.Component {
                 </svg>
 
                 
-                <div className="skill" style={{left: leftSpace, marginTop: 180,backgroundColor:'#0AA71D',display: window.scrollY > window.innerHeight * 1.1 + 690 ? '' : 'none',}}>{}</div>
-                <div className="skill" style={{left: leftSpace, marginTop: 310,backgroundColor:'#0AA777',display: window.scrollY > window.innerHeight * 1.1 + 840 ? '' : 'none',}}>
-
-                </div>
-                <div className="skill" style={{left: leftSpace, marginTop: 440,backgroundColor:'#0A9EA3',display: window.scrollY > window.innerHeight * 1.1 + 1000 ? '' : 'none',}}>
-
-                </div>
-                <div className="skill" style={{left: leftSpace, marginTop: 570,backgroundColor:'#0996CE',display: window.scrollY > window.innerHeight * 1.1 + 1160 ? '' : 'none',}}>
-
-                </div>
+                <div className="skill" style={{left: leftSpace, marginTop: 180,backgroundColor:'#0AA71D',display: window.scrollY > window.innerHeight * 1.1 + 690 ? '' : 'none',}}><div className="center-icons"><Mail color="white" size={25}/></div></div>
+                <div className="skill" style={{left: leftSpace, marginTop: 290,backgroundColor:'#0AA777',display: window.scrollY > window.innerHeight * 1.1 + 810 ? '' : 'none',}}><div className="center-icons"><Instagram color="white" size={25}/></div></div>
+                <div className="skill" style={{left: leftSpace, marginTop: 400,backgroundColor:'#0A9EA3',display: window.scrollY > window.innerHeight * 1.1 + 940 ? '' : 'none',}}><div className="center-icons"><GitHub color="white" size={25}/></div></div>
+                <div className="skill" style={{left: leftSpace, marginTop: 510,backgroundColor:'#0996CE',display: window.scrollY > window.innerHeight * 1.1 + 1050 ? '' : 'none',}}><div className="center-icons"><MessageCircle color="white" size={25}/></div></div>
 
                 <div className="who-am-i" style={{width: '50vw', height:'30vw', marginLeft:'37%', backgroundColor:'transparent', position:'absolute', top: window.innerHeight * 1.1 + 850, visibility: window.scrollY > window.innerHeight * 1.1 + 300 ? 'visible' : 'hidden',opacity: window.scrollY > window.innerHeight * 1.1 + 300 ? 1 : 0, transition: 'visibility 0.4s , opacity 0.4s linear'}}>
                     <h2>But who am I ?</h2>
@@ -170,9 +165,16 @@ class AboutMe extends React.Component {
                     <p>I love to code, develop software and cook chicken. And, ofcourse, Netflix</p>
                 </div>
 
-                <div className="who-am-i" style={{width: '50vw', height:'30vw', marginLeft:'37%', backgroundColor:'transparent', position:'absolute', top: window.innerHeight * 1.1 + 1150, visibility: window.scrollY > window.innerHeight * 1.1 + 600 ? 'visible' : 'hidden',opacity: window.scrollY > window.innerHeight * 1.1 + 600 ? 1 : 0, transition: 'visibility 0.4s , opacity 0.4s linear'}}>
+                <div className="snippets" style={{width: '50vw', height:'30vw', marginLeft:'37%', backgroundColor:'transparent', position:'absolute', top: window.innerHeight * 1.1 + 1150, visibility: window.scrollY > window.innerHeight * 1.1 + 600 ? 'visible' : 'hidden',opacity: window.scrollY > window.innerHeight * 1.1 + 600 ? 1 : 0, transition: 'visibility 0.4s , opacity 0.4s linear'}}>
                     <h4>Snippets</h4>
-                    
+                    <p className="subtitle">MAIL ME AT</p>
+                    <p className="info">yatish1606@gmail.com</p>
+                    <p className="subtitle">STALK ME ON INSTAGRAM</p>
+                    <p className="info">instagram.com/profile/yatish1606</p>
+                    <p className="subtitle">BROWSE MY CODE</p>
+                    <p className="info">github.com/yatish1606</p>
+                    <p className="subtitle">REACH OUT ON WHATSAPP</p>
+                    <p className="info">whatsapp.com/me/efubdi638</p>
                 </div>
 
 
