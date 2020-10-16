@@ -74,7 +74,7 @@ class AboutMe extends React.Component {
 
     render() {
         
-        console.log( this.stringToHTML(feather.icons.x.toSvg()))
+        
         let r = this.stringToHTML(feather.icons.x.toSvg())
         const leftSpace = document.documentElement.clientWidth * 0.235  + 14
 
