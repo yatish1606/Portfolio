@@ -6,6 +6,7 @@ import rock from '../images/rock.png'
 import earth from '../images/earth.png'
 import mid from '../images/mid.png'
 import foreground from '../images/foreground.png'
+import { ChevronDown } from 'react-feather'
 
 import '../css/home.css'
 
@@ -43,6 +44,14 @@ class Home extends React.Component {
                         <img src={foreground}/>
                     </div>
                     
+                </div>
+                {/* <div style={{position: 'absolute', bottom: 0, margin:'0 auto', left: '50%'}}>
+                    <ChevronDown size={35} color="white"/>
+                </div> */}
+                <div style={{position: 'absolute', left: '50%', bottom: 15, cursor: 'pointer'}} onClick={() => window.scroll({top: window.innerHeight + 75, left: 0, behavior: 'smooth'})}>
+                    <div style={{position: 'relative', left:'-50%'}}>
+                    <ChevronDown size={40} color="white"/>
+                    </div>
                 </div>
             </section>
         )

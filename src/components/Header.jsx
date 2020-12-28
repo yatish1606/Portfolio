@@ -15,7 +15,7 @@ class Header extends React.Component {
 
     componentDidMount() {
         window.addEventListener('scroll', () => {
-            this.setState({windowHeightExceeded: window.scrollY > window.innerHeight ? true : false})
+            this.setState({windowHeightExceeded: window.scrollY > window.innerHeight + 100 ? true : false})
         })
     }
 
@@ -25,18 +25,20 @@ class Header extends React.Component {
                 return window.scroll({top:0, left:0, behavior:'smooth'})
             case 1:
                 return window.scroll({top:window.innerHeight, left:0, behavior:'smooth'})
+            case 2:
+                return window.scroll({top:window.innerHeight*3 + 50, left:0, behavior:'smooth'})
         }
     }
 
     render() {
         
         return (
-            <div className="header-container" style={{background: this.state.windowHeightExceeded ? 'linear-gradient(to bottom, #000000 70%, #00000000 )' : 'transparent'}}>
+            <div className="header-container" style={{background: this.state.windowHeightExceeded ? '#151515' : 'transparent'}}>
                 <div>
                     <ul>
                         <li onClick={() => this.handleNavigation(0)}>Home</li>
                         <li onClick={() => this.handleNavigation(1)}>About Me</li>
-                        <li onClick={() => this.handleNavigation(0)}>Education</li>
+                        <li onClick={() => this.handleNavigation(2)}>Education</li>
                         <li onClick={() => this.handleNavigation(1)}>Hobbies</li>
                         <li onClick={() => this.handleNavigation(2)}>Projects</li>
                         <li onClick={() => this.handleNavigation(3)}>Contact</li>

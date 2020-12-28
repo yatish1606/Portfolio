@@ -11,3 +11,52 @@ body{
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --background: #151515;
+    --textColorMain: #eeeeee;
+    --sub: #ababab;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--textColorMain);
+    margin: 20px 0;
+    padding: 0;
+    font-family: 'Lexend Deca';
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.centerbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100vw;
+    padding: 10px 0;
+    background-color: var(--background);
+}

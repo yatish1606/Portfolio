@@ -16,6 +16,10 @@
     animation-duration: 0.4s;
 }
 
+.parentDiv {
+    background: linear-gradient(black 5%, var(--background) 25%) !important;
+}
+
 @keyframes linearwipe{ 
     from { background-color: transparent; transform: scale(0); }
     to { background-color: #F8CC05; transform: scale(1);} 

@@ -29,7 +29,7 @@ class AboutMe extends React.Component {
 
     componentDidMount() {
         
-        window.scroll({top:0, left:0, behavior:'smooth'})
+       // window.scroll({top:0, left:0, behavior:'smooth'})
         window.addEventListener('scroll', this._onScroll)
         var path = document.querySelector(".svgPath")
         var path2 = document.querySelector(".svgPath2")
@@ -76,10 +76,10 @@ class AboutMe extends React.Component {
         
         
         let r = this.stringToHTML(feather.icons.x.toSvg())
-        const leftSpace = document.documentElement.clientWidth * 0.235  + 14
+        const leftSpace = document.documentElement.clientWidth * 0.235  + 18
 
         return (
-            <div style={{backgroundColor:'black', color:'white', marginTop:60}} className="parentDiv" ref={this.parentReference}>
+            <div style={{color:'white', marginTop:60, height: 1700}} className="parentDiv container" ref={this.parentReference}>
                 <div className="svgDiv" style={{display:'flex', flexDirection:'column',alignItems:'center', width:'100vw'}}>
                     
                     {/* First SVG */}
