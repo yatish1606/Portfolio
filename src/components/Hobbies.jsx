@@ -2,6 +2,7 @@ import React from 'react'
 import Swiper from 'swiper'
 
 import Slide from './Slide'
+import mountainImage from '../images/mountain.jpg'
 
 import 'swiper/swiper-bundle.css'
 import '../css/hobbies.css'
@@ -24,7 +25,7 @@ class Hobbies extends React.Component {
         return (
         
             <div style={{height:1000, color: 'white', width: '100%'}}>
-                <div className="swiper-container">
+                {/* <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <Slide 
                             title="FileShare"
@@ -35,6 +36,14 @@ class Hobbies extends React.Component {
                             deployed="link"
                         />
                     </div>
+                </div> */}
+                <iframe width="100%" height={300} src="./Education.jsx">
+                    <div style={{width: '100%', height: 500,}}>
+
+                    </div>
+                </iframe>
+                <div className="mountain">
+
                 </div>
             </div>
         )

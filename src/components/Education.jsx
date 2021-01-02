@@ -44,7 +44,7 @@ class Education extends React.Component {
 
     render() {
         return (
-            <div style={{width: '100vw'}} className="container">
+            <div style={{width: '100vw', paddingTop: 100}} className="container">
                 <h2 className={'center title'} style={{marginBottom: 30}}>Education</h2>
                 <div className={'horizontal space-between'} style={{padding:'20px 10%', alignItems: 'flex-start'}}>
                     {this.renderEducation()}
