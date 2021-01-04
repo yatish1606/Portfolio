@@ -5,6 +5,7 @@ import Slide from './Slide'
 import mountainImage from '../images/mountain.jpg'
 import curveImage from '../images/curve.png'
 import gearImage from '../images/gear.png'
+import gearImage2 from '../images/gear2.png'
 import algorithmImage from '../images/algorthms.png'
 import appdevImage from '../images/appdev.png'
 import bookImage from '../images/book.png'
@@ -47,7 +48,15 @@ class Hobbies extends React.Component {
     componentDidMount() {
         var gear = document.getElementById('gear')
         window.addEventListener('scroll', () => {
-            gear.style.transform = "rotate("+window.pageYOffset*0.3+"deg)";
+            gear.style.transform = "rotate("+window.pageYOffset*0.4+"deg)";
+        })
+        var gear2 = document.getElementById('gear2')
+        window.addEventListener('scroll', () => {
+            gear2.style.transform = "rotate(-"+window.pageYOffset*0.4+"deg)";
+        })
+        var gear3 = document.getElementById('gear3')
+        window.addEventListener('scroll', () => {
+            gear3.style.transform = "rotate(-"+window.pageYOffset*0.45+"deg)";
         })
     }
 
@@ -58,8 +67,10 @@ class Hobbies extends React.Component {
                     
                     <div>
                         <img src={curveImage} width="100%"/>
-                        <div style={{position: 'absolute', margin:'0px auto', alignSelf: 'center', marginLeft:'auto', marginRight: 'auto', backgroundColor: 'red',width: 300, marginTop: -280, left: window.innerWidth*0.5-150, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <img src={gearImage} id="gear" style={{}} width="200px"/>
+                        <div style={{position: 'absolute', margin:'0px auto', alignSelf: 'center', marginLeft:'auto', marginRight: 'auto', backgroundColor: '#232323',width: 230, height: 230, marginTop: -290, left: window.innerWidth*0.5-115, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 150 }}>
+                            <img src={gearImage} id="gear" style={{position: 'absolute', right: 10, top: 50}} width="120px"/>
+                            <img src={gearImage2} id="gear2" style={{position: 'absolute', left: 50, top: 25}} width="60px"/>
+                            <img src={gearImage} id="gear3" style={{position: 'absolute', left: 15, top: 90}} width="90px"/>
                         </div>
                         
                         

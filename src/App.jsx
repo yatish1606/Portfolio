@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Header, Home, AboutMe, Education, Hobbies } from './components'
+import { Header, Home, AboutMe, Education, Hobbies, Contact } from './components'
 
 import './css/app.css'
 
@@ -18,6 +18,7 @@ class App extends React.Component {
                 <AboutMe/>
                 <Education/>
                 <Hobbies/>
+                <Contact/>
             </div>
         )
     }

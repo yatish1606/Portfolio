@@ -70,3 +70,11 @@ body{
     padding: 10px 0;
     background-color: var(--background);
 }
+
+.mountain {
+    background-image:linear-gradient(to bottom , #151515 2%, #00000000 96%), linear-gradient(to top , #00000000 70%, #0000009a ), url("../images/mountain.jpg");
+    height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
