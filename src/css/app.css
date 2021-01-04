@@ -33,6 +33,16 @@ body{
     font-family: 'Lexend Deca';
 }
 
+.subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--textColorMain);
+    margin: 20px 0;
+    padding: 0;
+    font-family: 'Lexend Deca';
+}
+
 .horizontal {
     display: flex;
     flex-direction: row;

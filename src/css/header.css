@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: space-between;
     transition: 0.1s ease-in;
+    backdrop-filter: blur(10px);
 }
 
 .header-container ul {

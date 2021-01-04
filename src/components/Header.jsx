@@ -33,7 +33,7 @@ class Header extends React.Component {
     render() {
         
         return (
-            <div className="header-container" style={{background: this.state.windowHeightExceeded ? '#151515' : 'transparent'}}>
+            <div className="header-container" style={{background: this.state.windowHeightExceeded ? '#15151580' : 'transparent'}}>
                 <div>
                     <ul>
                         <li onClick={() => this.handleNavigation(0)}>Home</li>

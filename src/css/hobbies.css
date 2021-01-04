@@ -5,3 +5,61 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.hobbiesmain {
+    width: 100%;
+    background: linear-gradient(to bottom , #0571C1 1%, #00000000 99%);
+    margin-top: -10px;
+
+}
+
+.hobbies-card {
+    width: 15vw;
+    height: 260px;
+    border-radius: 15px;
+    margin: 10px 10px;
+    background-color: #1515156a;
+    backdrop-filter: blur(10px);
+    display: inline-flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    /* box-shadow: 1px 1px 10px #1515155a; */
+}
+
+.hobbies-card-top {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    background-color: transparent;
+    z-index: 0;
+    
+}
+
+.hobbies-card-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    transition: 0.25s ease-in-out;
+}
+
+.img-hover {
+    width: 70px !important;
+    height: 70px !important;
+    margin: auto;
+    transition: 0.25s ease-in-out !important;
+}
+
+.hobbies-card-bottom {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    transition: 0.3s ease-in-out;
+    z-index: 0;
+    flex-direction: column;
+    align-items: center;
+}
+.hobbies-card-bottom:hover {
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
